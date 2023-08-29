@@ -1,0 +1,14 @@
+<form method="post" action="">
+    {% csrf_token %}
+  <fieldset>
+<!--    <legend>Fill Expense info</legend>-->
+
+    <div class="mb-3">
+        {{ form.as_p }}
+    </div>
+
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">Save</button>
+      </div>
+  </fieldset>
+</form>

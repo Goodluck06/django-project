@@ -1,0 +1,54 @@
+{% extends 'main.html' %}
+{%block content%}
+
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">BIDHAA</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+          <div class="btn-group me-2">
+            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+          </div>
+        </div>
+      </div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#backdrop">
+  NEW+
+</button>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#backdrop1">
+<!--  <svg class="bi"><use xlink:href="#house-fill"/></svg>-->
+  EDIT
+</button>
+
+
+      <canvas class="my-4 w-100" id="myChart" width="900" height="10"></canvas>
+
+      <h2>Section title</h2>
+      <div class="table-responsive small">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Item Name</th>
+              <th scope="col">Item unit</th>
+              <th scope="col">Item balance</th>
+              <th scope="col">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for item in items %}
+              <tr>
+                <td>{{item.product_id}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.unit}}</td>
+                <td>{{item.stock}}</td>
+                <td>Tsh {{item.selling_price}}</td>
+              </tr>
+            {%endfor%}
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</div>
+{% endblock content %}
+

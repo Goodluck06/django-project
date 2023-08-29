@@ -1,0 +1,81 @@
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticLabel">SALE FORM</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        {% include 'home/order.html' %}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Matumizi-->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">FORM YA MATUMIZI</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        {% include 'home/matumizi.html' %}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="backdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="backdropLabel">REGISTER NEW PRODUCT</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form method="POST" action="">
+          {% csrf_token %}
+          <fieldset>
+            <legend>Ongeza Bithaa Mpya</legend>
+              <div class="mb-3">
+                {{ form.as_p }}
+              </div>
+<!--            <div class="mb-3">-->
+<!--              <label for="productName" class="form-label">Product Name</label>-->
+<!--              <input type="text" id="productName" class="form-control" placeholder="Jina..?" required>-->
+<!--            </div>-->
+<!--            <div class="mb-3">-->
+<!--              <label for="unit" class="form-label">Unit</label>-->
+<!--              <input type="text" id="unit" class="form-control" placeholder="eg. Pair, Piece, Dozen?" required>-->
+<!--            </div>-->
+<!--            <div class="mb-3">-->
+<!--              <label for="bPrice" class="form-label">Buying Price per unit</label>-->
+<!--              <input type="number" id="bPrice" class="form-control" placeholder="bei ulonunulia?" required>-->
+<!--            </div>-->
+<!--            <div class="mb-3">-->
+<!--              <label for="sPrice" class="form-label">Selling Price per unit</label>-->
+<!--              <input type="number" id="sPrice" class="form-control" placeholder="bei yakuuzia?" required>-->
+<!--            </div>-->
+<!--            <div class="mb-3">-->
+<!--              <label for="idadi" class="form-label">Idadi ya Product</label>-->
+<!--              <input type="number" id="idadi" class="form-control" placeholder="ngapi?" required>-->
+<!--            </div>-->
+
+            <div class="modal-footer">
+<!--              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
+              <input type="submit" class="btn btn-primary" value="Submit" />
+            </div>
+
+          </fieldset>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</div>
